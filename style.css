@@ -1,0 +1,521 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.clouds {
+    position: absolute;
+    min-height: 29%;
+    min-width: 100%;
+    background: linear-gradient(180deg, #25cdff, #ffffff);
+    background-size: 400% 110%;
+    
+    -webkit-animation: AnimationName 49s ease infinite;
+    -moz-animation: AnimationName 49s ease infinite;
+    animation: AnimationName 49s ease infinite;
+}
+    
+@-webkit-keyframes AnimationName {
+    0%{background-position:25% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:75% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:25% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:75% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:25% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:75% 0%}
+}
+
+.grass {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 2;
+}
+
+.grass-img {
+    position: absolute;
+    bottom: 0px;
+    min-width: 100%;
+    max-height: 30%;
+}
+
+.organism-wrapper {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.head  {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 30%;
+}
+
+.romp {
+    height: 75px;
+    width: 40px;
+    background-color: black;
+    position: absolute;
+    right: 25px;
+    bottom: 19%;
+    z-index: 1;
+}
+
+.arm-one {
+    background-color: #F903AA;
+    position: absolute;
+    right: 25px;
+    bottom: 20%;
+    z-index: -1;
+    height: 58px;
+    width: 20px;
+    animation: kick2 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-delay: 2.8s;
+}
+
+.arm-two {
+    background-color: #F903AA;
+    position: absolute;
+    right: 20px;
+    bottom: 19%;
+    height: 58px;
+    width: 20px;
+    animation: kick 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-delay: 2.8s;
+}
+
+.leg-one {
+    height: 35px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    right: 30px;
+    bottom: 15%;
+}
+
+.leg-two {
+    height: 48px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    right: 37px;
+    bottom: 14%;
+    animation: kick 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-delay: 2.8s;
+    border-right: 1px solid pink;
+}
+
+@keyframes kick {
+    0% {
+        transform: rotate(0deg);
+      }
+    
+      /* Finish changes by here */
+      5% {
+        transform: rotate(45deg);
+      }
+    
+      /* Between 20% and 100%, nothing changes */
+      100% {
+        transform: rotate(45deg);
+      }
+}
+
+.organism-wrapper2 {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.head2  {
+    background-color: #F903AA;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    bottom: 40%;
+}
+
+.romp2 {
+    height: 75px;
+    width: 40px;
+    background-color: #F903AA;
+    position: absolute;
+    left: 25px;
+    bottom: 29%;
+    z-index: 1;
+}
+
+.arm-one2 {
+    background-color: black;
+    position: absolute;
+    left: 15px;
+    bottom: 74%;
+    z-index: 1;
+    height: 20px;
+    width: 58px;
+    animation: kick2 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.arm-two2 {
+    background-color: black;
+    position: absolute;
+    left: 24px;
+    bottom: 31%;
+    z-index: -1;
+    height: 58px;
+    width: 20px;
+    animation: kick 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.leg-one2 {
+    height: 35px;
+    width: 25px;
+    background-color: #F903AA;
+    position: absolute;
+    left: 29px;
+    bottom: 25%;
+}
+
+.leg-two2 {
+    height: 35px;
+    width: 25px;
+    background-color: #F903AA;
+    position: absolute;
+    left: 37px;
+    bottom: 26%;
+    border-left: 1px solid black;
+    animation: kick2 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes kick2 {
+    0% {
+        transform: rotate(0deg);
+      }
+    
+      /* Finish changes by here */
+      5% {
+        transform: rotate(-45deg);
+      }
+    
+      /* Between 20% and 100%, nothing changes */
+      100% {
+        transform: rotate(-45deg);
+      }
+}
+
+.ball {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: 40px;
+    bottom: 27%;
+
+    animation: roll 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+@keyframes roll {
+    0% {transform:translate( 0%,  0%);}
+    10% {transform:translate(0%,  -200%);}
+    20% {transform:translate(0%,  -300%);}
+    30% {transform:translate(0%,  -500%);}
+    40% {transform:translate(0%,  -700%);}
+    50% {transform:translate(0%,  -800%);}
+    60% {transform:translate(0%,  -700%);}
+    70% {transform:translate(0%,  -500%);}
+    80% {transform:translate(0%,  -300%);}
+    90% {transform:translate(0%,  50%);}
+   100% {transform:translate(0%,  350%);
+        left: 95%;}
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(92deg, #0005fd, #a1cdf7, #fd0000);
+    background-size: 600% 600%;
+    
+    -webkit-animation: AnimationName 2s ease infinite;
+    -moz-animation: AnimationName 2s ease infinite;
+    animation: AnimationName 2s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:39% 0%}
+    50%{background-position:62% 100%}
+    100%{background-position:39% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:39% 0%}
+    50%{background-position:62% 100%}
+    100%{background-position:39% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:39% 0%}
+    50%{background-position:62% 100%}
+    100%{background-position:39% 0%}
+}
+
+.scaler {
+    -webkit-animation-name: scale;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 0, 100%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.spinning-square {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ffbd5c;
+    background: -moz-radial-gradient(center, ellipse cover, #ffbd5c 0%, #ffbd5c 50%, #ffbd5c 51%, #7db9e8 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #ffbd5c 0%,#ffbd5c 50%,#ffbd5c 51%,#7db9e8 100%);
+    background: radial-gradient(ellipse at center, #ffbd5c 0%,#ffbd5c 50%,#ffbd5c 51%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbd5c', endColorstr='#7db9e8',GradientType=1 );
+    color: #34b3b3;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 140px;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.laura {
+    color: #4475a6;
+    -webkit-animation-name: spin-back;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin-back;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin-back;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+    font-size: 22px;
+}
+
+@keyframes spin-back {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    position: initial;
+    right: 0;
+    margin-top: -30%;
+    z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+	-webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.x2 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x3 {
+	-webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x4 {
+	-webkit-animation: animateCloud 18s linear infinite;
+	-moz-animation: animateCloud 18s linear infinite;
+	animation: animateCloud 18s linear infinite;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x5 {
+	-webkit-animation: animateCloud 25s linear infinite;
+	-moz-animation: animateCloud 25s linear infinite;
+	animation: animateCloud 25s linear infinite;
+	
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 120px;
+	position: relative;
+	width: 350px;
+}
+
+.cloud:after, .cloud:before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+
+.cloud:after {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 100px;
+	left: 50px;
+	top: -50px;
+	width: 100px;
+}
+
+.cloud:before {
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+
+	width: 180px;
+	height: 180px;
+	right: 50px;
+	top: -90px;
+}
